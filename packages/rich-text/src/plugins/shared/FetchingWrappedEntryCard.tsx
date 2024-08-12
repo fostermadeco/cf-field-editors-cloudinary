@@ -37,7 +37,7 @@ const InternalEntryCard = React.memo((props: InternalEntryCard) => {
   return (
     <WrappedEntryCard
       size="default"
-      getAsset={getAsset}
+      getAsset={getAsset()}
       getEntityScheduledActions={loadEntityScheduledActions}
       isSelected={props.isSelected}
       isDisabled={props.isDisabled}
