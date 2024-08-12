@@ -29,10 +29,15 @@ const InternalEntryCard = React.memo((props: InternalEntryCard) => {
     .getCachedContentTypes()
     .find((contentType) => contentType.sys.id === entry.sys.contentType.sys.id);
 
+  const getAsset = () => {
+    console.log('getAsset', entry);
+    return props.sdk.space.getAsset;
+  };
+
   return (
     <WrappedEntryCard
       size="default"
-      getAsset={props.sdk.space.getAsset}
+      getAsset={getAsset}
       getEntityScheduledActions={loadEntityScheduledActions}
       isSelected={props.isSelected}
       isDisabled={props.isDisabled}
