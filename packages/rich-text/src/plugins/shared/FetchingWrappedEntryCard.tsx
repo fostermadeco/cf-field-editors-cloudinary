@@ -23,6 +23,8 @@ interface InternalEntryCard {
 }
 
 const InternalEntryCard = React.memo((props: InternalEntryCard) => {
+  console.log('InternalEntryCard', props);
+
   const { entry, sdk, loadEntityScheduledActions } = props;
 
   const contentType = sdk.space
